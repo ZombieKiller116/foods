@@ -20,20 +20,20 @@ class AdminAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'assets/bootstrap/css/bootstrap.min.css',
-        'assets/font-awesome/4.5.0/css/font-awesome.min.css',
-        'assets/ionicons/2.0.1/css/ionicons.min.css',
-        'assets/dist/css/AdminLTE.min.css',
-        'assets/dist/css/skins/_all-skins.min.css',
+        'admin/assets/bootstrap/css/bootstrap.min.css',
+        'admin/assets/font-awesome/4.5.0/css/font-awesome.min.css',
+        'admin/assets/ionicons/2.0.1/css/ionicons.min.css',
+        'admin/assets/dist/css/AdminLTE.min.css',
+        'admin/assets/dist/css/skins/_all-skins.min.css',
 
 
     ];
     public $js = [
-        'assets/bootstrap/js/bootstrap.min.js',
-        'assets/plugins/slimScroll/jquery.slimscroll.min.js',
-        'assets/plugins/fastclick/fastclick.js',
-        'assets/dist/js/app.min.js',
-        'assets/dist/js/demo.js'
+        'admin/assets/bootstrap/js/bootstrap.min.js',
+        'admin/assets/plugins/slimScroll/jquery.slimscroll.min.js',
+        'admin/assets/plugins/fastclick/fastclick.js',
+        'admin/assets/dist/js/app.min.js',
+        'admin/assets/dist/js/demo.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

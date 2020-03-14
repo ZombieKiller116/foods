@@ -4,6 +4,8 @@
 namespace app\controllers\admin;
 
 
+use app\models\Comment;
+use Yii;
 use yii\web\Controller;
 
 class CommentController extends Controller
@@ -13,11 +15,22 @@ class CommentController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+
+        $comments = Comment::find()->with('post')->all();
+
+        return $this->render('index', compact('comments'));
     }
 
     public function actionDelete()
     {
-        return ['message' => 'Все ок'];
+        if(Yii::$app->request->isAjax){
+            $id = Yii::$app->request->post('id');
+            $comment = Comment::find()->where('id', $id)->limit(1)->one();
+            if(!$comment) {
+                return json_encode(['error' => 'Ошибка! Перезагрузите страницу']);
+            }
+            $comment->delete();
+            return json_encode(['message' => 'Категория успешно удалена!']);
+        }
     }
 }

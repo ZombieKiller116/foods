@@ -10,6 +10,12 @@ use yii\db\Expression;
 
 class Comment extends ActiveRecord
 {
+
+    public function getPost()
+    {
+        return $this->hasOne(Post::className(), ['id' => 'post_id']);
+    }
+
     public function behaviors()
     {
         return [

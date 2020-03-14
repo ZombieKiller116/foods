@@ -49,11 +49,9 @@ use yii\widgets\LinkPager;
                     <?php endforeach; ?>
                 </div>
                 <div class="col text-center">
-                    <div class="block-27">
                         <?= LinkPager::widget([
-                            'pagination' => $pages,
+                            'pagination' => $pages
                         ]); ?>
-                    </div>
                 </div>
 
             </div>

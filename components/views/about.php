@@ -10,10 +10,9 @@
             </div>
         </div>
         <div class="sidebar-box p-4 ftco-animate">
-            <form action="/search" class="search-form" method="POST">
+            <form action="/search" class="search-form">
                 <div class="form-group">
                     <span class="icon icon-search"></span>
-                    <input type="hidden" name="<?=Yii::$app->request->csrfParam; ?>" value="<?=Yii::$app->request->getCsrfToken(); ?>" />
                     <input type="text" min="1" class="form-control" name="search" placeholder="Search">
                 </div>
             </form>

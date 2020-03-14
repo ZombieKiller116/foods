@@ -1,5 +1,5 @@
-
 <?php
+
 use app\assets\AdminAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -63,7 +63,8 @@ AdminAsset::register($this);
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="http://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1RkY-JBwvQ60_fGb7TLEZFOTaaKTM5SRkZCeTgDn6uOyic" class="img-circle" alt="User Image">
+                    <img src="http://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1RkY-JBwvQ60_fGb7TLEZFOTaaKTM5SRkZCeTgDn6uOyic"
+                         class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>Admin</p>
@@ -74,22 +75,19 @@ AdminAsset::register($this);
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="treeview">
-                    <a href="#">
+                    <a href="/<?=Url::to('admin/home/index')?>">
                         <i class="fa fa-dashboard"></i> <span>Админ-панель</span>
                     </a>
                 </li>
-                <li><a href="/<?=Url::to('admin/post')?>"><i class="fa fa-sticky-note-o"></i> <span>Посты</span></a></li>
-                <li><a href="/<?=Url::to('admin/category')?>"><i class="fa fa-list-ul"></i> <span>Категории</span></a></li>
+                <li><a href="/<?= Url::to('admin/post') ?>"><i class="fa fa-sticky-note-o"></i> <span>Посты</span></a>
+                </li>
+                <li><a href="/<?= Url::to('admin/category') ?>"><i class="fa fa-list-ul"></i> <span>Категории</span></a>
+                </li>
                 <li>
-                    <a href="#">
+                    <a href="/<?= Url::to('admin/comment') ?>">
                         <i class="fa fa-commenting"></i> <span>Комментарии</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-green">5</small>
-            </span>
                     </a>
                 </li>
-                <li><a href="#"><i class="fa fa-user-plus"></i> <span>Подписчики</span></a></li>
-
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -98,7 +96,7 @@ AdminAsset::register($this);
     <!-- =============================================== -->
 
     <!-- Content Wrapper. Contains page content -->
-    <?=$content ?>
+    <?= $content ?>
     <!-- /.content-wrapper -->
 
     <footer class="main-footer">

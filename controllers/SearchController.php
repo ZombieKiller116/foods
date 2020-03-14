@@ -18,9 +18,9 @@ class SearchController extends Controller
 
     public function actionIndex()
     {
-        $search = Yii::$app->request->post('search') ?? null;
+        $search = Yii::$app->request->get('search') ?? null;
 
-        if (Yii::$app->request->isPost && $search && strlen($search) > 0) {
+//        if (Yii::$app->request->isPost && $search && strlen($search) > 0) {
 
             $posts = Post::find();
             $categories = Category::find()->all();
@@ -38,12 +38,14 @@ class SearchController extends Controller
                     'pageSize' => 6,
                 ]);
 
-            $posts = $posts->all();
+            $posts = $posts->offset($pages->offset)
+                ->limit($pages->limit)
+                ->all();
 
             return $this->render('index', compact('posts', 'pages', 'search', 'categories'));
-        } else {
-            throw new NotFoundHttpException();
-        }
+//        } else {
+//            throw new NotFoundHttpException();
+//        }
     }
 
 }

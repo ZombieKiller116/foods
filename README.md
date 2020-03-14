@@ -1,6 +1,6 @@
 <h1>Installation</h1>
 
-<p>To install the blog, you will need to execute multiple console commands, but before that navigate to the directory:</p>
+<p>To install the blog, you will need to execute multiple console commands, but before you do this, you must configure the database connection in config/db.php, then go to the working directory and run these commands:</p>
 <br>
 <pre>
 <code>

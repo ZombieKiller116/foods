@@ -13,7 +13,7 @@ php yii migrate
 <br>
 <pre>
 <code>
-php yii generate-category -c=3(min 3)
+php yii generate-category -c=3
 php yii generate-post -c=20
 </code>
 </pre>
